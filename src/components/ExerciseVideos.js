@@ -1,9 +1,31 @@
-import React from "react";
-import { Typography, Box, Stack } from "@mui/material";
-import Loader from "./Loader";
+import React from "react"
+import { Typography, Box, Stack } from "@mui/material"
+import Loader from "./Loader"
+
+// Theme colors
+const theme = {
+  primary: "#1E88E5", // Vibrant blue
+  secondary: "#FF6B00", // Vibrant orange
+  hover: "#1565C0", // Darker blue
+  hoverSecondary: "#F65100", // Darker orange
+  gradient: "linear-gradient(135deg, #1E88E5 0%, #FF6B00 100%)",
+  lightGradient:
+    "linear-gradient(135deg, rgba(30,136,229,0.1) 0%, rgba(255,107,0,0.1) 100%)",
+}
+
+// Gradient text style
+const gradientTextStyle = {
+  background: theme.gradient,
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  color: "transparent",
+  fontWeight: 600,
+  display: "inline-block",
+}
 
 const ExerciseVideos = ({ exerciseVideos, name }) => {
-  if (!exerciseVideos.length) return <Loader />;
+  if (!exerciseVideos.length) return <Loader />
 
   return (
     <Box sx={{ marginTop: { lg: "203px", xs: "20px" } }} p="20px">
@@ -13,11 +35,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         color="#000"
         mb="33px"
       >
-        Watch{" "}
-        <span style={{ color: "#423E78", textTransform: "capitalize" }}>
-          {name}
-        </span>{" "}
-        exercise videos
+        Watch <span style={gradientTextStyle}>{name}</span> exercise videos
       </Typography>
       <Stack
         sx={{ flexDirection: { lg: "row" }, gap: { lg: "110px", xs: "0px" } }}
@@ -54,7 +72,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         ))}
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default ExerciseVideos;
+export default ExerciseVideos
