@@ -2,7 +2,6 @@
 
 Move Fit is a modern fitness application built with React that helps users discover, learn, and perfect their exercise routines. With a comprehensive database of exercises, detailed demonstrations, and a user-friendly interface, it's your perfect companion for fitness journey.
 
-![Move Fit Banner](src/assets/images/banner.png)
 
 ## Features 🌟
 
